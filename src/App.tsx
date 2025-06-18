@@ -1,10 +1,11 @@
 import React from "react";
-import { Typography, Paper, Stack } from "@mui/material";
+import { Typography, Stack } from "@mui/material";
 import CustomAccordion from "./component/CustomAccordion";
 import CustomTab from "./component/CustomTab";
 import RatingModal from "./component/RatingModal";
 import DigitalClock from "./component/DigitalClock";
 import FrequentlyAskQuestions from "./challenges/FrequentlyAskQuestions";
+import ImageCarrousel from "./challenges/ImageCarrousel/ImageCarrousel";
 
 function App() {
   const data = [
@@ -39,7 +40,7 @@ function App() {
   ];
 
   return (
-    <Paper style={{ overflow: "scroll" }}>
+    <Stack spacing={2} style={{ overflow: "scroll" }}>
       <Stack spacing={2}>
         <Typography variant="h1">Playground</Typography>
         <DigitalClock />
@@ -57,10 +58,12 @@ function App() {
           key={index}
           question={question.question}
           answer={question.answer}
-          open={true}
+          open={false}
         />
       ))}
-    </Paper>
+
+      <ImageCarrousel />
+    </Stack>
   );
 }
 
