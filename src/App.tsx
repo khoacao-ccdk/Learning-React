@@ -6,6 +6,7 @@ import RatingModal from "./component/RatingModal";
 import DigitalClock from "./component/DigitalClock";
 import FrequentlyAskQuestions from "./challenges/FrequentlyAskQuestions";
 import ImageCarrousel from "./challenges/ImageCarrousel/ImageCarrousel";
+import TicTacToe from "./games/TicTacToe/TicTacToe";
 
 function App() {
   const data = [
@@ -45,6 +46,7 @@ function App() {
         <Typography variant="h1">Playground</Typography>
         <DigitalClock />
         <RatingModal />
+        <TicTacToe />
         <Stack spacing={1}>
           {data.map((row, index) => (
             <CustomAccordion key={index} label={row.label} body={row.body} />
